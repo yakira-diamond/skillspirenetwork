@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  --color-imperial: #1c1f4a;
+  --color-imperial-deep: #12142f;
+  --color-lilac: #b79eff;
+  --color-ivory: #fdfdfd;
+  --color-neon: #00f0ff;
+  --color-graphite: #1b1b1b;
+}
+
+@theme inline {
+  --color-imperial: var(--color-imperial);
+  --color-imperial-deep: var(--color-imperial-deep);
+  --color-lilac: var(--color-lilac);
+  --color-ivory: var(--color-ivory);
+  --color-neon: var(--color-neon);
+  --color-graphite: var(--color-graphite);
+
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-inter);
+  --font-mono: var(--font-plex-mono);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-ivory);
+  color: var(--color-graphite);
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+/* Signature step-rule: an ascending baseline used under section eyebrows,
+   echoing the Spire mark. Height increases left to right. */
+.step-rule {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 14px;
+}
+.step-rule span {
+  display: block;
+  width: 3px;
+  background: var(--color-neon);
+}
+.step-rule span:nth-child(1) { height: 40%; }
+.step-rule span:nth-child(2) { height: 65%; }
+.step-rule span:nth-child(3) { height: 85%; }
+.step-rule span:nth-child(4) { height: 100%; }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
