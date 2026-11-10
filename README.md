@@ -121,4 +121,3 @@ Fonts: **Space Grotesk** (headings), **Inter** (body), **IBM Plex Mono**
 4. Learner dashboard (real content — currently a placeholder)
 5. Admin backend
 
-Come back to this project any time and pick up wherever it left off.
